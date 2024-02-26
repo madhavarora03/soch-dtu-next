@@ -53,7 +53,7 @@ export default function Header() {
         scrolled ? 'bg-[#FAF9F4] shadow-2xl ' : 'border-b-[0.8px]'
       }`}
     >
-      <Link href='/'>
+      <Link href='/' className='flex items-center gap-2'>
         <Image
           src='/logo.png'
           alt=''
