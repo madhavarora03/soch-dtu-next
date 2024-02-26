@@ -49,7 +49,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 flex w-full items-center justify-between px-24 py-2 z-[10] ${
+      className={`fixed top-0 flex w-full items-center transition-all duration-150 justify-between px-14 py-2 z-[10] ${
         scrolled ? 'bg-[#FAF9F4] shadow-2xl ' : 'border-b-[0.8px]'
       }`}
     >
@@ -61,15 +61,20 @@ export default function Header() {
           width={200}
           className='w-[7.5dvw]'
         />
+        <p
+          className={`${
+            scrolled ? 'text-black' : 'text-white'
+          } text-[2.5dvw] tracking-tighter`}
+        >
+          SolarBreeze
+        </p>
       </Link>
       <nav className='gap-[2dvw] flex'>
         {navLinks.map((link, index) => (
           <Link href={link.link} key={index}>
             <p
-              className={`${
-                scrolled
-                  ? 'text-slate-900 text-[1.5dvw] hover:text-slate-600'
-                  : 'text-white'
+              className={`text-[1.5dvw] ${
+                scrolled ? 'text-slate-900 hover:text-slate-600' : 'text-white'
               }`}
             >
               {link.name}
